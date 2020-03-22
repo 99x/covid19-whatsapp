@@ -1,4 +1,6 @@
 from flask import Flask, request
+from flask_caching import Cache
+
 from twilio.twiml.messaging_response import MessagingResponse
 
 import requests 
@@ -6,7 +8,16 @@ import menu
 
 from repositories.disease_data_repository import DiseaseDataRepository
 
+config = {
+    "DEBUG": True,          # some Flask specific configs
+    "CACHE_TYPE": "simple", # Flask-Caching related configs
+    "CACHE_DEFAULT_TIMEOUT": 300
+}
+
 app = Flask(__name__)
+
+app.config.from_mapping(config)
+cache = Cache(app)
 
 TAMIL = 3
 SINHALA = 2
@@ -19,7 +30,7 @@ def bot():
     msg = resp.message()
     responded = False
 
-    data_repository = DiseaseDataRepository()
+    data_repository = DiseaseDataRepository(cache= cache)
     data_repository.get_disease_data()
 
     if '1' == incoming_msg:
