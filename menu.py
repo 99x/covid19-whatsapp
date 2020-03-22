@@ -1,7 +1,7 @@
 
 def get_welcome_menu():
     menu = '''
-    *Welcome to COVID-19 bot made by UNDP, ICTA and 99X*
+    *Welcome to COVID-19 bot made by UNDP, ICTA and 99XTechnology*
     
     * You can get information regarding the current outbreak of coronavirus in Sri Lanka.
     * ශ්‍රී ලංකාවේ වර්තමාන COVID-19 වෛරසය පැතිරීම පිළිබඳ තොරතුරු මෙතැනින් ලබා ගත හැකිය.
