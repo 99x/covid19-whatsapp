@@ -2,6 +2,8 @@ from flask import Flask, request
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
 
+from repositories.disease_data_repository import DiseaseDataRepository
+
 app = Flask(__name__)
 
 TAMIL = 3
@@ -15,6 +17,8 @@ def bot():
     msg = resp.message()
     responded = False
 
+    data_repository = DiseaseDataRepository()
+    print(data_repository.get_disease_data(data=1))
     if '1' in incoming_msg:
         msg.body(get_stats(ENGLISH))
         responded = True
