@@ -62,25 +62,22 @@ def get_graph(lang):
     return graph_url
 
 def get_menu():
-    menu = '''*A project by UNDP and 99X*
+    menu = '''A project by UNDP and 99X to control spread of COVID-19 in Sri Lanka
 
-        You can get latest Sri Lankan covid-19 information here. 
-        Reply with the number: 
+    *You can get latest COVID-19 information of Sri Lanka here (in English)*
+    1. Latest numbers
+    2. Related news
+    3. Case graph
+    
+    *ඔබට ශ්‍රී ලංකාවේ නවතම COVID-19 තොරතුරු මෙතැනින් ලබා ගත හැකිය (සිංහලෙන්)*
+    4. අලුත්ම සංක්‍යා 
+    5. නවතම පුවත් 
+    6. ප්‍රස්ථාර දත්ත
 
-        *in English*
-        1. Latest numbers
-        2. Related news
-        3. Case graph
-        
-        *සිංහලෙන්*
-        4. අලුත්ම සංක්‍යා 
-        5. නවතම පුවත් 
-        6. ප්‍රස්ථාර දත්ත
+    *இலங்கையின் சமீபத்திய COVID-19 தகவல்களை இங்கே பெறலாம் (தமிழில்)*
+    7. சமீபத்திய எண்கள்
+    8. சமீபத்திய செய்தி
+    9. வரைபடத் தரவு
 
-        *தமிழில்*
-        7. சமீபத்திய எண்கள்
-        8. சமீபத்திய செய்தி
-        9. வரைபடத் தரவு
-        
         '''
     return menu
