@@ -36,20 +36,19 @@ def bot():
     msg = resp.message()
     responded = False
 
-    
-    
-    
-
     if '1' == incoming_msg:
-        msg.body(menu.get_english_menu())
+        #msg.body(menu.get_english_menu())
+        msg.body(get_stats(ENGLISH))
         responded = True
     if '2' == incoming_msg:
-        msg.body(menu.get_sinhala_menu())
+        #msg.body(menu.get_sinhala_menu())
+        msg.body(get_stats(SINHALA))
         responded = True
     if '3' == incoming_msg:
-        msg.body(menu.get_tamil_menu())
+        #msg.body(menu.get_tamil_menu())
+        msg.body(get_stats(TAMIL))
         responded = True
-
+    '''
     if '4' == incoming_msg:
         msg.body(get_stats(ENGLISH))
         responded = True
@@ -79,7 +78,7 @@ def bot():
     if '12' == incoming_msg:
         msg.media(get_graph(TAMIL))
         responded = True
-
+    '''
     if not responded:
         msg.body(menu.get_welcome_menu())
     return str(resp)
