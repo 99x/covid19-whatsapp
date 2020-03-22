@@ -14,16 +14,16 @@ config = {
     "CACHE_DEFAULT_TIMEOUT": 300
 }
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-app.config.from_mapping(config)
-cache = Cache(app)
+application.config.from_mapping(config)
+cache = Cache(application)
 
 TAMIL = 3
 SINHALA = 2
 ENGLISH = 1
 
-@app.route('/bot', methods=['POST'])
+@application.route('/bot', methods=['POST'])
 def bot():
     incoming_msg = request.values.get('Body', '').lower()
     resp = MessagingResponse()
@@ -91,10 +91,4 @@ def get_news(lang):
 def get_graph(lang):
     graph_url= 'https://blog.watchdog.paladinanalytics.com/content/images/2020/03/image-5.png'
     return graph_url
-
-    # run the app.
-if __name__ == "__main__":
-    # Setting debug to True enables debug output. This line should be
-    # removed before deploying a production app.
-    # app.debug = True
-    app.run()
+    
