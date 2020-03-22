@@ -7,21 +7,27 @@ import requests
 import menu
 
 from repositories.disease_data_repository import DiseaseDataRepository
-
-config = {
-    "DEBUG": True,          # some Flask specific configs
-    "CACHE_TYPE": "simple", # Flask-Caching related configs
-    "CACHE_DEFAULT_TIMEOUT": 300
-}
+import i18n
 
 application = Flask(__name__)
 
+
+# Caching related configurations
+config = {
+    "DEBUG": True,          
+    "CACHE_TYPE": "simple", 
+    "CACHE_DEFAULT_TIMEOUT": 300
+}
 application.config.from_mapping(config)
 cache = Cache(application)
 
-TAMIL = 3
-SINHALA = 2
-ENGLISH = 1
+# Setting i18n file format
+i18n.set('filename_format', '{locale}.{format}')
+i18n.load_path.append('translations')
+
+TAMIL = 'tm'
+SINHALA = 'sl'
+ENGLISH = 'en'
 
 @application.route('/bot', methods=['POST'])
 def bot():
@@ -79,9 +85,10 @@ def bot():
     return str(resp)
 
 def get_stats(lang):
+    i18n.set('locale', lang)
     data_repository = DiseaseDataRepository(cache= cache)
     data = data_repository.get_disease_data()
-    stats = f"\n*Globally* \n{data['global_confirmed']} confirmed \n{data['global_deaths']} deaths \n\n*Sri Lanka* \n{data['sl_confirmed']} confirmed \n{data['sl_deaths']} deaths"
+    stats = f"\n*{i18n.t('_Globally_')}* \n{data['global_confirmed']} {i18n.t('_Confirmed_')} \n{data['global_deaths']} {i18n.t('_Deaths_')} \n\n*{i18n.t('_SriLanka_')}* \n{data['sl_confirmed']} {i18n.t('_Confirmed_')} \n{data['sl_deaths']} {i18n.t('_Deaths_')}"
     return stats
 
 def get_news(lang):
