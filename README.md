@@ -13,6 +13,11 @@ This app was created by following the base tutorial: https://www.twilio.com/blog
 
 ## how to deploy the app in local environment
 * follow the cofiguration steps given in the [article](https://www.twilio.com/blog/build-a-whatsapp-chatbot-with-python-flask-and-twilio) but use the flask application code in this repository instead of the code in article.
+* Use follwing command to start the app (python bot.py won't work)
+```shell
+export FLASK_APP=bot.py
+flask run
+```
 * Use the steps 'Testing the Chat bot' in the article to setup ngrok tunnel and related Twilio configurations.
 
 
