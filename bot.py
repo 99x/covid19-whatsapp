@@ -1,6 +1,7 @@
 from flask import Flask, request
-import requests 
 from twilio.twiml.messaging_response import MessagingResponse
+
+import requests 
 import menu
 
 app = Flask(__name__)
