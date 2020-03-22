@@ -15,7 +15,7 @@ This app was created by following the base tutorial: https://www.twilio.com/blog
 2. Install [Python 3.6](https://www.python.org/downloads/) or newer.
 3. Install Python package VirtualEnv. using `pip3 install virtualenv`. 
 4. Activate virtual environment and install dependencies. Windows (Powershell) -> `virtualenv .env; .\.env\Scripts\activate; pip install -r requirements.txt`, Mac/Unix -> `virtualenv .env && source .env/bin/activate && pip install -r requirements.txt`
-4. Run [Flask Application](https://flask.palletsprojects.com/en/1.1.x/cli/). Windows (Powershell) -> `$env:FLASK_APP = "bot.py"; flask run`, Mac/Unix -> `export FLASK_APP=bot.py && flask run`
+4. Run [Flask Application](https://flask.palletsprojects.com/en/1.1.x/cli/). Windows (Powershell) -> `$env:FLASK_APP = "application.py"; flask run`, Mac/Unix -> `export FLASK_APP=application.py && flask run`
 5. Use the steps 'Testing the Chat bot' in the [article](https://www.twilio.com/blog/build-a-whatsapp-chatbot-with-python-flask-and-twilio) to setup ngrok tunnel and related Twilio configurations.
 
 Note: Follow the cofiguration steps given in the [article](https://www.twilio.com/blog/build-a-whatsapp-chatbot-with-python-flask-and-twilio) for more information regarding how it works. If you need to install new python packages make sure you export them to requirements.txt by using `pip freeze > requirements.txt`
