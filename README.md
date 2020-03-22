@@ -22,3 +22,6 @@ Note: Follow the cofiguration steps given in the [article](https://www.twilio.co
 
 ## Testing Locally
 You can install Postman and send a POST request to http://127.0.0.1:5000/bot with raw body having number 1, 2 & etc. as input.
+
+## Deployment
+We are using AWS ElasticBeanstalk for the deployment and you can find more details in [Deploying a flask application to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html)
