@@ -91,3 +91,10 @@ def get_news(lang):
 def get_graph(lang):
     graph_url= 'https://blog.watchdog.paladinanalytics.com/content/images/2020/03/image-5.png'
     return graph_url
+
+    # run the app.
+if __name__ == "__main__":
+    # Setting debug to True enables debug output. This line should be
+    # removed before deploying a production app.
+    # app.debug = True
+    app.run()
