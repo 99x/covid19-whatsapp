@@ -30,8 +30,9 @@ def bot():
     msg = resp.message()
     responded = False
 
-    data_repository = DiseaseDataRepository(cache= cache)
-    data_repository.get_disease_data()
+    
+    
+    
 
     if '1' == incoming_msg:
         msg.body(menu.get_english_menu())
@@ -78,7 +79,9 @@ def bot():
     return str(resp)
 
 def get_stats(lang):
-    stats = str(lang) + '\n*Globally* \n266 073 confirmed \n11 184 deaths \n\n*Sri Lanka* \n80 confirmed \n0 deaths'
+    data_repository = DiseaseDataRepository(cache= cache)
+    data = data_repository.get_disease_data()
+    stats = f"\n*Globally* \n{data['global_confirmed']} confirmed \n{data['global_deaths']} deaths \n\n*Sri Lanka* \n{data['sl_confirmed']} confirmed \n{data['sl_deaths']} deaths"
     return stats
 
 def get_news(lang):

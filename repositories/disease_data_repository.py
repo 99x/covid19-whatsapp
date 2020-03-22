@@ -24,13 +24,18 @@ class DiseaseDataRepository:
     
     if cached_data == None:
       response = requests.get(url= self.url_collection[self.COVID_DATA_URL])
-      response_data = response.json()
-      self.cache.set(self.COVID_DATA_URL, response_data, timeout = 30)
+      response_data = response.json()['data']
+      self.cache.set(self.COVID_DATA_URL, response_data, timeout = 60)
     else:
       response_data = cached_data
     
-    print(response_data)
-    return "ok"
+    formatted_object = {
+      'global_confirmed': response_data['global_total_cases'], 
+      'global_deaths': response_data['global_deaths'],
+      'sl_confirmed': response_data['local_total_cases'],
+      'sl_deaths': response_data['local_deaths']
+    }
+    return formatted_object
 
 
 
