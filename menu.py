@@ -4,15 +4,17 @@ def get_welcome_menu():
     *Welcome to COVID-19 bot made by UNDP, ICTA and 99XTechnology*
     
     * You can get information regarding the current outbreak of coronavirus in Sri Lanka.
-    * ශ්‍රී ලංකාවේ වර්තමාන COVID-19 වෛරසය පැතිරීම පිළිබඳ තොරතුරු මෙතැනින් ලබා ගත හැකිය.
+    * ශ්‍රී ලංකාවේ වර්තමාන COVID-19 වෛරසය පැතිරීම පිළිබඳ තොරතුරු මෙතැනින් ලබා ගත හැකිය. 
     * இலங்கையில் கோவிட் -19 வெடித்தது குறித்த தகவல்களை இங்கே பெறலாம்.
 
-    1. Provide data in English
+    1. For English language, send '1' as a message
     2. සිංහල භාෂාවෙන් දත්ත දෙන්න 
     3. தரவை தமிழில் கொடுங்கள்
     
-    .
-        '''
+    Enter the menu number:
+    මෙනු අංකය ඇතුළත් කරන්න:
+    மெனு எண்ணை உள்ளிடவும்:
+    '''
     return menu
 
 def get_english_menu():
