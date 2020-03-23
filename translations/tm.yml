@@ -1,13 +1,15 @@
 tm:
-  _Globally_: "Globally:"
-  _SriLanka_: "Sri Lanka:"
+  _Globally_: "-- Globally --"
+  _SriLanka_: "-- Sri Lanka --"
 
   _NewCases_: " - New Cases"
-  _Confirmed_: " - Confirmed Cases"
-  _Deaths_: " - Total Deaths"
+  _Confirmed_: " - Total Cases"
   _Suspects_: " - Suspects in Hospitals"
   _Recovered_: " - Recovered Patients"
 
-  _LatestNewsLocal_: Latest news -
+  _NewDeaths_: " - New Deaths"
+  _Deaths_: " - Total Deaths"
+
+  _LatestNewsLocal_: Local news -
   _LatestNewsGlobal_: World news -
-  _InternationalBreifings_: International press briefings - 
+  _InternationalBreifings_: Press briefings - 
