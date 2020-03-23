@@ -36,20 +36,19 @@ def bot():
     msg = resp.message()
     responded = False
 
-    
-    
-    
-
     if '1' == incoming_msg:
-        msg.body(menu.get_english_menu())
+        #msg.body(menu.get_english_menu())
+        msg.body(get_stats(ENGLISH))
         responded = True
     if '2' == incoming_msg:
-        msg.body(menu.get_sinhala_menu())
+        #msg.body(menu.get_sinhala_menu())
+        msg.body(get_stats(SINHALA))
         responded = True
     if '3' == incoming_msg:
-        msg.body(menu.get_tamil_menu())
+        #msg.body(menu.get_tamil_menu())
+        msg.body(get_stats(TAMIL))
         responded = True
-
+    '''
     if '4' == incoming_msg:
         msg.body(get_stats(ENGLISH))
         responded = True
@@ -79,7 +78,7 @@ def bot():
     if '12' == incoming_msg:
         msg.media(get_graph(TAMIL))
         responded = True
-
+    '''
     if not responded:
         msg.body(menu.get_welcome_menu())
     return str(resp)
@@ -88,7 +87,18 @@ def get_stats(lang):
     i18n.set('locale', lang)
     data_repository = DiseaseDataRepository(cache= cache)
     data = data_repository.get_disease_data()
-    stats = f"\n*{i18n.t('_Globally_')}* \n{data['global_confirmed']} {i18n.t('_Confirmed_')} \n{data['global_deaths']} {i18n.t('_Deaths_')} \n\n*{i18n.t('_SriLanka_')}* \n{data['sl_confirmed']} {i18n.t('_Confirmed_')} \n{data['sl_deaths']} {i18n.t('_Deaths_')}"
+    stats = f"""*{i18n.t('_SriLanka_')}* \n 
+    {data['sl_confirmed']} {i18n.t('_Confirmed_')} \n
+    {data['sl_deaths']} {i18n.t('_Deaths_')} \n \n 
+    {i18n.t('_LatestNewsLocal_')} www.news.lk \n \n 
+    *{i18n.t('_Globally_')}* \n 
+    {data['global_confirmed']} {i18n.t('_Confirmed_')} \n
+    {data['global_deaths']} {i18n.t('_Deaths_')} \n \n 
+    {i18n.t('_LatestNewsGlobal_')} www.who.int \n 
+    {i18n.t('_InternationalBreifings_')}  www.who.int/press-briefings \n"""
+
+
+    #stats = f"\n*{i18n.t('_Globally_')}* \n{data['global_confirmed']} {i18n.t('_Confirmed_')} \n{data['global_deaths']} {i18n.t('_Deaths_')} \n\n*{i18n.t('_SriLanka_')}* \n{data['sl_confirmed']} {i18n.t('_Confirmed_')} \n{data['sl_deaths']} {i18n.t('_Deaths_')}"
     return stats
 
 def get_news(lang):
