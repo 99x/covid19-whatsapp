@@ -33,7 +33,10 @@ class DiseaseDataRepository:
       'global_confirmed': response_data['global_total_cases'], 
       'global_deaths': response_data['global_deaths'],
       'sl_confirmed': response_data['local_total_cases'],
-      'sl_deaths': response_data['local_deaths']
+      'sl_deaths': response_data['local_deaths'],
+      'sl_new': response_data['local_new_cases'],
+      'sl_hospitals': response_data['local_total_number_of_individuals_in_hospitals'],
+      'sl_recovered': response_data['local_recovered']
     }
     return formatted_object
 

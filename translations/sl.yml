@@ -1,8 +1,14 @@
 sl:
-  _Globally_: මුළු ලෝකයේම
-  _Confirmed_: තහවුරු කල රෝගීන්
-  _Deaths_: මරණ
-  _SriLanka_: ශ්‍රී ලංකාවේ
+  _Globally_: "මුළු ලෝකයේම:"
+  _SriLanka_: "ශ්‍රී ලංකාවේ:"
+
+  _NewCases_: " - New Cases"
+  _Confirmed_: " - තහවුරු කල රෝගීන්"
+  _Deaths_: " - මරණ"
+  _Suspects_: " - Suspects in Hospitals"
+  _Recovered_: " - Recovered Patients"
+
   _LatestNewsLocal_: නවතම පුවත්
   _LatestNewsGlobal_: නවතම ජාත්‍යන්තර පුවත්
   _InternationalBreifings_: ජාත්‍යන්තර පුවත්පත් වාර්තාකරණය
+
