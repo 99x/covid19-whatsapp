@@ -7,8 +7,7 @@ class Stats:
         self.cache = cache
 
     def get_stats(self, lang):
-        i18n.set('locale', lang)
         data_repository = DiseaseDataRepository(cache= self.cache)
         data = data_repository.get_disease_data()
-        stats = f"""*{i18n.t('_SriLanka_')}* \n\n{data['sl_new']} {i18n.t('_NewCases_')}\n{data['sl_confirmed']} {i18n.t('_Confirmed_')} \n{data['sl_hospitals']} {i18n.t('_Suspects_')}\n\n{data['sl_recovered']} {i18n.t('_Recovered_')}\n{data['sl_new_deaths']} {i18n.t('_NewDeaths_')}\n{data['sl_deaths']} {i18n.t('_Deaths_')} \n\n{i18n.t('_LatestNewsLocal_')} www.news.lk \n\n\n *{i18n.t('_Globally_')}* \n\n {data['global_new_cases']} {i18n.t('_NewCases_')}\n {data['global_confirmed']} {i18n.t('_Confirmed_')}\n\n {data['global_recovered']} {i18n.t('_Recovered_')} \n {data['global_new_deaths']} {i18n.t('_NewDeaths_')} \n {data['global_deaths']} {i18n.t('_Deaths_')}  \n\n{i18n.t('_LatestNewsGlobal_')} www.who.int  \n"""
+        stats = f"""*{i18n.t('_SriLanka_', locale=lang)}* \n\n{data['sl_new']} {i18n.t('_NewCases_', locale=lang)}\n{data['sl_confirmed']} {i18n.t('_Confirmed_', locale=lang)} \n{data['sl_hospitals']} {i18n.t('_Suspects_', locale=lang)}\n\n{data['sl_recovered']} {i18n.t('_Recovered_', locale=lang)}\n{data['sl_new_deaths']} {i18n.t('_NewDeaths_', locale=lang)}\n{data['sl_deaths']} {i18n.t('_Deaths_', locale=lang)} \n\n{i18n.t('_LatestNewsLocal_')} www.news.lk \n\n\n *{i18n.t('_Globally_', locale=lang)}* \n\n {data['global_new_cases']} {i18n.t('_NewCases_', locale=lang)}\n {data['global_confirmed']} {i18n.t('_Confirmed_', locale=lang)}\n\n {data['global_recovered']} {i18n.t('_Recovered_', locale=lang)} \n {data['global_new_deaths']} {i18n.t('_NewDeaths_', locale=lang)} \n {data['global_deaths']} {i18n.t('_Deaths_', locale=lang)}  \n\n{i18n.t('_LatestNewsGlobal_', locale=lang)} www.who.int  \n"""
         return stats
