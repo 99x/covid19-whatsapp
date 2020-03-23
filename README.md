@@ -21,7 +21,7 @@ This app was created by following the base tutorial: https://www.twilio.com/blog
 Note: Follow the cofiguration steps given in the [article](https://www.twilio.com/blog/build-a-whatsapp-chatbot-with-python-flask-and-twilio) for more information regarding how it works. If you need to install new python packages make sure you export them to requirements.txt by using `pip freeze > requirements.txt`
 
 ## Testing Locally
-You can install Postman and send a POST request to http://127.0.0.1:5000/bot with raw body having number 1, 2 & etc. as input.
+You can install Postman and send a POST request to http://127.0.0.1:5000/bot with form-data and Key is "Body" and having number 1, 2 & etc. as the value.
 
 ## Deployment
 We are using AWS ElasticBeanstalk for the deployment and you can find more details in [Deploying a flask application to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html)
