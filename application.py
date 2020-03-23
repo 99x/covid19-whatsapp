@@ -5,7 +5,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 import requests 
 import menu
-from corvid_stats import Stats
+from covid_stats import Stats
 
 
 application = Flask(__name__)
