@@ -30,10 +30,18 @@ class DiseaseDataRepository:
       response_data = cached_data
     
     formatted_object = {
+      'global_new_cases': response_data['global_new_cases'], 
       'global_confirmed': response_data['global_total_cases'], 
       'global_deaths': response_data['global_deaths'],
+      'global_new_deaths': response_data['global_new_deaths'],
+      'global_recovered': response_data['global_recovered'],
       'sl_confirmed': response_data['local_total_cases'],
-      'sl_deaths': response_data['local_deaths']
+      'sl_deaths': response_data['local_deaths'],
+      'sl_new_deaths': response_data['local_new_deaths'],
+      'sl_new': response_data['local_new_cases'],
+      'sl_hospitals': response_data['local_total_number_of_individuals_in_hospitals'],
+      'sl_recovered': response_data['local_recovered'],
+      'last_updated': response_data['update_date_time']
     }
     return formatted_object
 

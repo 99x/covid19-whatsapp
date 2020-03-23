@@ -1,8 +1,24 @@
 en:
-  _Globally_: Globally
-  _Confirmed_: Confirmed
-  _Deaths_: Deaths
-  _SriLanka_: Sri Lanka
-  _LatestNewsLocal_: For latest news visit
-  _LatestNewsGlobal_: For latest news throughout the globe visit
-  _InternationalBreifings_: For international press briefings visit
+  _Globally_: "-- Globally --"
+  _SriLanka_: "-- Sri Lanka --"
+
+  _NewCases_: " - New Cases"
+  _Confirmed_: " - Total Cases"
+  _Suspects_: " - Suspects"
+  _Recovered_: " - Recovered "
+
+  _NewDeaths_: " - New Deaths"
+  _Deaths_: " - Total Deaths"
+
+  _LatestNewsLocal_: "Local news -"
+  _LatestNewsGlobal_: "World news -"
+  _InternationalBreifings_: "International press briefings - "
+
+  _LatestNumbers: "Latest Numbers"
+  _ProtectYourself: "Protect yourself"
+  _YourQuestionsAnswered: "Your questions answered"
+  _Mythbusters: "Mythbusters"
+  _TravelAdvice: "Travel advice"
+  _NewsAndPress: "News & Press"
+  _Share: "Share"
+

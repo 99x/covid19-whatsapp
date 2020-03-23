@@ -1,8 +1,23 @@
 sl:
-  _Globally_: මුළු ලෝකයේම
-  _Confirmed_: තහවුරු කල රෝගීන්
-  _Deaths_: මරණ
-  _SriLanka_: ශ්‍රී ලංකාවේ
-  _LatestNewsLocal_: නවතම පුවත්
-  _LatestNewsGlobal_: නවතම ජාත්‍යන්තර පුවත්
-  _InternationalBreifings_: ජාත්‍යන්තර පුවත්පත් වාර්තාකරණය
+  _Globally_: "ලෝක තත්වය​:"
+  _SriLanka_: "ශ්‍රී ලංකාවේ තත්වය​:"
+
+  _NewCases_: " - නව රෝගීන්"
+  _Confirmed_: " - තහවුරු කල රෝගීන්"
+  _Suspects_: " - සැක කටයුතු රෝගීන් "
+  _Recovered_: " - සුවපත් වූ රෝගීන් "
+  _NewDeaths_: " - නව මරණ"
+  _Deaths_: " - මුළු මරණ"
+  
+  _LatestNewsLocal_: දේශීය පුවත්
+  _LatestNewsGlobal_: ජාත්‍යන්තර පුවත්
+  _InternationalBreifings_: ජාත්‍යන්තර පුවත්පත් වාර්තා
+
+  _LatestNumbers: "නවතම දත්ත​"
+  _ProtectYourself: "ඔබ ආරක්‍ෂා වන්නේ කෙසේද​"
+  _YourQuestionsAnswered: "ඔබේ ප්‍රශ්න වලට පිළිතුරු"
+  _Mythbusters: "ව්‍යාජ තොරතුරු අනාවරනය​"
+  _TravelAdvice: "දුර ගමන් පිලිබඳ උපදෙස්"
+  _NewsAndPress: "මාධ්‍ය වලින් ලැබෙන පුවත්"
+  _Share: "තොරතුරු බෙදාගන්න​"
+
