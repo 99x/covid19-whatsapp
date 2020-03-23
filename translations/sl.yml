@@ -5,10 +5,11 @@ sl:
   _NewCases_: " - නව රෝගීන්"
   _Confirmed_: " - තහවුරු කල රෝගීන්"
   _Deaths_: " - මරණ"
+  _NewDeaths_: " - නව මරණ"
   _Suspects_: " - රෝහල්වල සැක කටයුතු රෝගීන් "
   _Recovered_: " - සුවපත් වූ රෝගීන් "
 
-  _LatestNewsLocal_: නවතම පුවත්
+  _LatestNewsLocal_: දේශීය පුවත්
   _LatestNewsGlobal_: නවතම ජාත්‍යන්තර පුවත්
   _InternationalBreifings_: ජාත්‍යන්තර පුවත්පත් වාර්තාකරණය
 
