@@ -8,9 +8,9 @@ en:
   _Suspects_: " - Suspects in Hospitals"
   _Recovered_: " - Recovered Patients"
 
-  _LatestNewsLocal_: Local news -
-  _LatestNewsGlobal_: World news -
-  _InternationalBreifings_: International press briefings - 
+  _LatestNewsLocal_: "Local news -"
+  _LatestNewsGlobal_: "World news -"
+  _InternationalBreifings_: "International press briefings - "
 
   _LatestNumbers: "Latest Numbers"
   _ProtectYourself: "Protect yourself"
