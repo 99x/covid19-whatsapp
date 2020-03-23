@@ -1,15 +1,23 @@
 tm:
-  _Globally_: "-- Globally --"
-  _SriLanka_: "-- Sri Lanka --"
 
-  _NewCases_: " - New Cases"
-  _Confirmed_: " - Total Cases"
-  _Suspects_: " - Suspects in Hospitals"
-  _Recovered_: " - Recovered Patients"
+  _Globally_: "உலகளவில்:"
+  _SriLanka_: "இலங்கை:"
 
-  _NewDeaths_: " - New Deaths"
-  _Deaths_: " - Total Deaths"
+  _NewCases_: " - புதிய  நோயாளிகள்"
+  _Confirmed_: " - உறுதிப்படுத்தப்பட்ட நோயாளிகள்"
+  _Deaths_: " - மொத்த இறப்புக்கள்"
+  _Suspects_: " - வைத்தியசாலையில் கண்காணிக்கப்படுவோர்"
+  _Recovered_: " - குணமடைந்த நோயாளிகள்"
 
-  _LatestNewsLocal_: Local news -
-  _LatestNewsGlobal_: World news -
-  _InternationalBreifings_: Press briefings - 
+  _LatestNewsLocal_: தற்போதைய செய்தி -
+  _LatestNewsGlobal_: சர்வதேச செய்தி -
+  _InternationalBreifings_: சர்வதேச ஊடக விளக்கங்கள் - 
+
+  _LatestNumbers: "தற்போதைய எண்ணிக்கை"
+  _ProtectYourself: "உங்களைப் பாதுகாத்துக் கொள்ளுங்கள்"
+  _YourQuestionsAnswered: "உங்கள் கேள்விகளுக்கு பதிலளிக்கப்பட்டதா"
+  _Mythbusters: "தவறான தகவல்களை தெளிவுபடுத்துதல்"
+  _TravelAdvice: "பயண ஆலோசனை"
+  _NewsAndPress: "செய்தி & ஊடகம்"
+  _Share: "பகிர்"
+
