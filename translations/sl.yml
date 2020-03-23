@@ -2,13 +2,14 @@ sl:
   _Globally_: "ලෝක තත්වය​:"
   _SriLanka_: "ශ්‍රී ලංකාවේ තත්වය​:"
 
-  _NewCases_: " - අලුතින් වාර්තා වූ රෝගීන්"
+  _NewCases_: " - නව රෝගීන්"
   _Confirmed_: " - තහවුරු කල රෝගීන්"
+  _Suspects_: " - රෝහල්වල සැක කටයුතු රෝගීන් "
+  _Recovered_: " - සුවපත් වූ රෝගීන් "
+  _NewDeaths_: " - නව මරණ"
   _Deaths_: " - මරණ"
-  _Suspects_: " - තවමත් පරීක්‍ෂාවට ලක්වන රෝගීන්"
-  _Recovered_: " - සුව වූ රෝගීන්"
-
-  _LatestNewsLocal_: නවතම පුවත්
+  
+  _LatestNewsLocal_: දේශීය පුවත්
   _LatestNewsGlobal_: නවතම ජාත්‍යන්තර පුවත්
   _InternationalBreifings_: ජාත්‍යන්තර පුවත්පත් වාර්තා
 
