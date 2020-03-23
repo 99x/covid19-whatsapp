@@ -4,8 +4,8 @@ en:
 
   _NewCases_: " - New Cases"
   _Confirmed_: " - Total Cases"
-  _Suspects_: " - Suspects in Hospitals"
-  _Recovered_: " - Recovered Patients"
+  _Suspects_: " - Suspects"
+  _Recovered_: " - Recovered "
 
   _NewDeaths_: " - New Deaths"
   _Deaths_: " - Total Deaths"
