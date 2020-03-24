@@ -3,6 +3,8 @@ import requests
 
 class DiseaseDataRepository:
   DATA_SOURCE = 'hpb'
+  API_RESPONSE_CACHE_KEY = 'api_response_cache_key'
+  API_RESPONSE_SUCCESS_CACHE_KEY = 'api_response_success_cache_key'
   COVID_DATA_URL = 'covid_data_url'
 
   url_collection = {}
@@ -20,12 +22,18 @@ class DiseaseDataRepository:
 
   
   def get_disease_data(self):
-    cached_data = self.cache.get(self.COVID_DATA_URL)
+    cached_data = self.cache.get(self.API_RESPONSE_CACHE_KEY)
     
     if cached_data == None:
-      response = requests.get(url= self.url_collection[self.COVID_DATA_URL])
-      response_data = response.json()['data']
-      self.cache.set(self.COVID_DATA_URL, response_data, timeout = 60)
+      try:
+        response = requests.get(url= self.url_collection[self.COVID_DATA_URL])
+        response_data = response.json()['data']
+        self.cache.set(self.API_RESPONSE_CACHE_KEY, response_data, timeout = 60)
+        self.cache.set(self.API_RESPONSE_SUCCESS_CACHE_KEY, response_data, timeout = 3600)
+      except requests.exceptions.RequestException as error:
+        print ("Error in getting data from health.gov.lk API:", error)
+        print ("Responding from last succesful response")
+        response_data = self.cache.get(self.API_RESPONSE_SUCCESS_CACHE_KEY)
     else:
       response_data = cached_data
     
