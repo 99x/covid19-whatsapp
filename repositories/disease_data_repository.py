@@ -18,8 +18,6 @@ class DiseaseDataRepository:
         print(self.url_collection)
       except yaml.YAMLError as exc:
         print(exc)
-
-
   
   def get_disease_data(self):
     cached_data = self.cache.get(self.API_RESPONSE_CACHE_KEY)
@@ -71,6 +69,3 @@ class DiseaseDataRepository:
       'last_updated': response_data['update_date_time']
     }
     return formatted_object
-
-
-
