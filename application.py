@@ -29,6 +29,7 @@ TAMIL = 'tm'
 SINHALA = 'sl'
 ENGLISH = 'en'
 
+
 @application.route('/bot', methods=['POST'])
 def bot():
     incoming_msg = request.values.get('Body', '').lower()
