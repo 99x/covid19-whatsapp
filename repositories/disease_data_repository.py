@@ -42,6 +42,9 @@ class DiseaseDataRepository:
       except requests.exceptions.Timeout as errt:
         errorResponse = True
         print ("Error in getting data from health.gov.lk API: Type Timeout:",errt)
+      except requests.exceptions.SSLError as errs:
+        errorResponse = True
+        print ("Error in getting data from health.gov.lk API: Type SSLError:",errs)
       except requests.exceptions.RequestException as err:
         errorResponse = True
         print ("Error in getting data from health.gov.lk API: Type RequestException:",err)
