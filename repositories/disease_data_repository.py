@@ -23,17 +23,33 @@ class DiseaseDataRepository:
   
   def get_disease_data(self):
     cached_data = self.cache.get(self.API_RESPONSE_CACHE_KEY)
-    
+    errorResponse = False
+
     if cached_data == None:
+
       try:
-        response = requests.get(url= self.url_collection[self.COVID_DATA_URL])
+        response =  requests.get(url= self.url_collection[self.COVID_DATA_URL])
+        response.raise_for_status()
         response_data = response.json()['data']
         self.cache.set(self.API_RESPONSE_CACHE_KEY, response_data, timeout = 60)
-        self.cache.set(self.API_RESPONSE_SUCCESS_CACHE_KEY, response_data, timeout = 3600)
-      except requests.exceptions.RequestException as error:
-        print ("Error in getting data from health.gov.lk API:", error)
-        print ("Responding from last succesful response")
+        self.cache.set(self.API_RESPONSE_SUCCESS_CACHE_KEY, response_data, timeout = 3600)    
+      except requests.exceptions.HTTPError as errh:
+        errorResponse = True
+        print ("Error in getting data from health.gov.lk API: Type Http:",errh)
+      except requests.exceptions.ConnectionError as errc:
+        errorResponse = True
+        print ("Error in getting data from health.gov.lk API: Type Connection:",errc)
+      except requests.exceptions.Timeout as errt:
+        errorResponse = True
+        print ("Error in getting data from health.gov.lk API: Type Timeout:",errt)
+      except requests.exceptions.RequestException as err:
+        errorResponse = True
+        print ("Error in getting data from health.gov.lk API: Type RequestException:",err)
+        
+      if errorResponse == True:
         response_data = self.cache.get(self.API_RESPONSE_SUCCESS_CACHE_KEY)
+        print ("Responding from last succesful response")
+
     else:
       response_data = cached_data
     
