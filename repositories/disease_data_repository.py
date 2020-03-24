@@ -28,6 +28,7 @@ class DiseaseDataRepository:
       try:
         response =  requests.get(url= self.url_collection[self.COVID_DATA_URL])
         response.raise_for_status()
+        
         response_data = response.json()['data']
         self.cache.set(self.API_RESPONSE_CACHE_KEY, response_data, timeout = 60)
         self.cache.set(self.API_RESPONSE_SUCCESS_CACHE_KEY, response_data, timeout = 3600)    
