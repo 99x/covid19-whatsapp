@@ -55,19 +55,28 @@ def bot():
     if '5' == incoming_msg:
         msg.body(info.get_protect_info(ENGLISH))
         responded = True
-
     if '6' == incoming_msg:
+        msg.body(info.get_travel_info(ENGLISH))
+        responded = True
+
+    if '7' == incoming_msg:
         msg.body(stats.get_numbers(SINHALA))
         responded = True
-    if '7' == incoming_msg:
+    if '8' == incoming_msg:
         msg.body(info.get_protect_info(SINHALA))
         responded = True
+    if '9' == incoming_msg:
+        msg.body(info.get_travel_info(SINHALA))
+        responded = True
 
-    if '8' == incoming_msg:
+    if '10' == incoming_msg:
         msg.body(stats.get_numbers(TAMIL))
         responded = True
-    if '9' == incoming_msg:
+    if '11' == incoming_msg:
         msg.body(info.get_protect_info(TAMIL))
+        responded = True
+    if '12' == incoming_msg:
+        msg.body(info.get_travel_info(TAMIL))
         responded = True
 
     if not responded:
