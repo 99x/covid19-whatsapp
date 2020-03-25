@@ -5,6 +5,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 import requests 
 import menu
+import info
 from covid_stats import Stats
 
 
@@ -39,14 +40,36 @@ def bot():
     responded = False
 
     if '1' == incoming_msg:
-        msg.body(stats.get_stats(ENGLISH))
+        msg.body(menu.get_main_menu(ENGLISH))
         responded = True
     if '2' == incoming_msg:
-        msg.body(stats.get_stats(SINHALA))
+        msg.body(menu.get_main_menu(SINHALA))
         responded = True
     if '3' == incoming_msg:
-        msg.body(stats.get_stats(TAMIL))
+        msg.body(menu.get_main_menu(TAMIL))
         responded = True
+
+    if '4' == incoming_msg:
+        msg.body(stats.get_numbers(ENGLISH))
+        responded = True
+    if '5' == incoming_msg:
+        msg.body(info.get_protect_info(ENGLISH))
+        responded = True
+
+    if '6' == incoming_msg:
+        msg.body(stats.get_numbers(SINHALA))
+        responded = True
+    if '7' == incoming_msg:
+        msg.body(info.get_protect_info(SINHALA))
+        responded = True
+
+    if '8' == incoming_msg:
+        msg.body(stats.get_numbers(TAMIL))
+        responded = True
+    if '9' == incoming_msg:
+        msg.body(info.get_protect_info(TAMIL))
+        responded = True
+
     if not responded:
         msg.body(menu.get_welcome_menu())
     return str(resp)
