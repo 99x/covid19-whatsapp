@@ -30,6 +30,12 @@ TAMIL = 'tm'
 SINHALA = 'sl'
 ENGLISH = 'en'
 
+@application.route('/redirect', methods=['POST'])
+def redirect():
+    resp = MessagingResponse()
+    msg = resp.message()
+    msg.body(info.get_redirect_msg())
+    return str(resp)
 
 @application.route('/bot', methods=['POST'])
 def bot():
