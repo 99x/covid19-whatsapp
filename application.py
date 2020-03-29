@@ -7,6 +7,7 @@ import requests
 import menu
 import info
 from covid_stats import Stats
+from repositories.analytics_repository import AnalyticsRepository
 
 
 application = Flask(__name__)
@@ -26,6 +27,9 @@ stats = Stats(cache)
 i18n.set('filename_format', '{locale}.{format}')
 i18n.load_path.append('translations')
 
+# Google Analytics
+analytics_repo = AnalyticsRepository()
+
 TAMIL = 'tm'
 SINHALA = 'sl'
 ENGLISH = 'en'
@@ -44,6 +48,7 @@ def bot():
     resp = MessagingResponse()
     msg = resp.message()
     responded = False
+    
 
     if '1' == incoming_msg:
         msg.body(menu.get_main_menu(ENGLISH))
@@ -96,5 +101,7 @@ def bot():
 
     if not responded:
         msg.body(menu.get_welcome_menu())
+        analytics_repo.add_event(request.values['From'])
+
     return str(resp)
 
