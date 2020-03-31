@@ -72,31 +72,41 @@ def bot():
     if '7' == incoming_msg:
         msg.body(info.get_questions_info(ENGLISH))
         responded = True
-
     if '8' == incoming_msg:
+        msg.body(info.get_latest_news(ENGLISH))
+        responded = True
+
+
+    if '9' == incoming_msg:
         msg.body(stats.get_numbers(SINHALA))
         responded = True
-    if '9' == incoming_msg:
+    if '10' == incoming_msg:
         msg.body(info.get_protect_info(SINHALA))
         responded = True
-    if '10' == incoming_msg:
+    if '11' == incoming_msg:
         msg.body(info.get_travel_info(SINHALA))
         responded = True
-    if '11' == incoming_msg:
+    if '12' == incoming_msg:
         msg.body(info.get_questions_info(SINHALA))
         responded = True
+    if '13' == incoming_msg:
+        msg.body(info.get_latest_news(SINHALA))
+        responded = True
 
-    if '12' == incoming_msg:
+    if '14' == incoming_msg:
         msg.body(stats.get_numbers(TAMIL))
         responded = True
-    if '13' == incoming_msg:
+    if '15' == incoming_msg:
         msg.body(info.get_protect_info(TAMIL))
         responded = True
-    if '14' == incoming_msg:
+    if '16' == incoming_msg:
         msg.body(info.get_travel_info(TAMIL))
         responded = True
-    if '15' == incoming_msg:
+    if '17' == incoming_msg:
         msg.body(info.get_questions_info(TAMIL))
+        responded = True
+    if '18' == incoming_msg:
+        msg.body(info.get_latest_news(TAMIL))
         responded = True
 
     if not responded:
