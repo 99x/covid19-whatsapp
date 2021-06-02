@@ -27,7 +27,7 @@ requests==2.23.0
 six==1.14.0
 twilio==6.37.0
 typed-ast==1.4.1
-urllib3==1.25.8
+urllib3==1.26.5
 virtualenv==20.0.13
 virtualenvwrapper-win==1.2.6
 Werkzeug==1.0.0
